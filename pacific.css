@@ -1,3 +1,7 @@
+header, main, nav, footer, figure, figcaption, aside, section, article {
+  display: block;
+}
+
 body { background-color: #FFFFFF;
 	   color: #666666;
 	   background-image: url(images/ptrbackground.jpg);
@@ -15,11 +19,19 @@ h1 { background-color: #000033;
 nav { background-color: #90C7E3;
 	  text-decoration: none;
 	  padding-left: 20px; 
-	  padding: 5px;
-	  text-align: center;
-	  font-weight: bold;}
+	  padding: 15px;
+	  font-weight: bold;
+	  float: left;
+	  width: 160px;
+	  font-size: 1.2em;}	
+	  
+nav a:link { color: #ffffff; }
+nav a:visited { color: #EAEAEA; }
+nav a:hover {color: #000066; }  
 	 
-main { padding: 1px 20px; }
+main { background-color: #ffffff;
+	   padding: 1px 20px; 
+	   margin-left: 190px; }
 
 h2 { color: #3399CC; 
 	 text-shadow: 1px 1px 1px #666;
@@ -28,7 +40,31 @@ h2 { color: #3399CC;
 h3 { color: #000033; 
 	font-family: Georgia,Times,"Times New Roman",serif}
 
-ul { list-style-image: url(images/marker.gif); }
+main ul { list-style-image: url(images/marker.gif); }
+
+nav ul { list-style-type: none;
+		 padding: 0px;
+		 margin: 0px;}
+		 
+	 
+
+.homehero { background-image: url(images/coasthero.jpg);
+			background-repeat: no-repeat;
+			height: 300px;
+			background-size: 100% 100%; 
+			margin-left: 190px;}
+
+.yurthero { background-image: url(images/yurthero.jpg);
+			background-repeat: no-repeat;
+			height: 300px;
+			background-size: 100% 100%; 
+			margin-left: 190px;}
+
+.trailhero { background-image: url(images/trailhero.jpg);
+			background-repeat: no-repeat;
+			height: 300px;
+			background-size: 100% 100%; 
+			margin-left: 190px;}
 
 .resort { font-weight: bold; 
 		  color: #5C7FA3 }
@@ -36,16 +72,61 @@ ul { list-style-image: url(images/marker.gif); }
 #content {color: #666666; 
 		  line-height: 90%;}
 		  
-#footer {line-height: 75%;
+#footer {background-color: #ffffff;
+		 line-height: 75%;
 		 text-align: center;
 		 padding: 20px;
 		 font-style: italic;
+		 clear: left; 
+		 margin-left: 190px;
 		 font-family: Georgia,Times,"Times New Roman",serif}
 		 
-#wrapper { background-color: #FFFFFF;
+#wrapper { background-color: #90C7E3;
 		   width: 80%;
 		   min-width: 960px; 
 		   margin-left: auto;
 		   margin-right: auto; 
 		   box-shadow: 5px 5px 5px #000033; }
-		 
+		   
+#gallery { position: relative; 
+			height: 200px; 
+			float: none;
+			padding: 0;}
+
+#gallery ul { width: 250px; list-style-type: none; }
+
+#gallery li { display: inline; float: none; padding: 0px; }
+
+#gallery img { border-style: none; }
+
+#gallery a { text-decoration: none; 
+			 color: #333; 
+			 font-style: italic; }
+
+#gallery span { display: none;
+				float: left;
+				padding: 10px; 
+				position: absolute;
+				top: 10px;
+				left: 320px;
+				opacity: .25;}
+
+#gallery a:hover span { display: block; 
+						position: absolute;
+						top: 15px; 
+						left: 320px; 
+						text-align: center; }
+
+@media only screen and (max-width: 768px) { nav {float: none;}
+											body {margin: 0px;}
+											#wrapper {min-width: 0px;
+													  box-shadow: none;}
+											h1 {margin-top: 0px;}
+											nav {width: auto; padding: .5em;
+											text-align: center;}
+											nav li {display: inline; 
+													padding: 0px .75px 0px .75px;}
+											main {margin-left: 0px}
+											.homehero {margin-left: 0px}
+											.yurthero {margin-left: 0px}
+											.trailhero {margin-left: 0px}}	
